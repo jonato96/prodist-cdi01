@@ -10,10 +10,12 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    // https://mvnrepository.com/artifact/org.jboss.weld.se/weld-se-core
+    implementation group: 'org.jboss.weld.se', name: 'weld-se-core', version: '4.0.2.Final'
 }
 
-test {
-    useJUnitPlatform()
+sourceSets{
+    main{
+        output.resourcesDir = file("${buildDir}/classes/java/main")
+    }
 }
