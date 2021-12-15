@@ -7,6 +7,9 @@ import jakarta.enterprise.inject.se.SeContainerInitializer;
 
 public class Principal {
     public static void main(String[] args) {
+        //Ahora ya no se busca cualquier posible componentes
+        //Sino que solo los que estan anotados
+        
         //Inicializamos el contenedor
         SeContainer container = SeContainerInitializer
                 .newInstance()
